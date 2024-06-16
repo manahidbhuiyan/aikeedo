@@ -7,7 +7,18 @@
     padding: 15px 32px !important;
     position: fixed !important;
     z-index: 1;
-    border-bottom: 1px solid red;
+    transition: all 0.5s;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+}
+.navbar-toggler{
+    border: none !important;
+    outline: 0 !important;
+    box-shadow: none !important;
 }
 .navbar-toggler:focus {
     box-shadow: none !important;
@@ -62,6 +73,7 @@
 }
 .search-input::placeholder{
     color: #94a3b8;
+    font-size: 14px;
 }
 .search-icon {
     position: absolute;
@@ -80,7 +92,7 @@
     position: absolute;
     right: 10px; /* Adjust the position of the helper text */
     color: #aaa;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 /* right side */
@@ -102,7 +114,7 @@
 }
 .star-image{
     width: 20px !important;
-    fill: #94a3b8 !important;
+    fill: #38BDF8 !important;
 }
 .github-image{
     width: 25px !important;
@@ -159,7 +171,8 @@
 /* Mobile View Sidebar */
 .nav-overlay {
     position: fixed;
-    background: rgba(15,23,42,.5);
+    backdrop-filter: blur(8px); /* Adjust blur strength as needed */
+    background-color: rgba(15, 23, 42, .5); /* Adjust background color and opacity */
     /* filter: blur(8px);
     -webkit-filter: blur(8px); */
     width: 0;
@@ -192,16 +205,21 @@
     justify-content: flex-start;
   }
   .mobile-logo{
-    margin-left: 47px;
+    margin-left: 32px;
     margin-top: 2px;
   }
   .cross{
+    width: 30px;
     margin-bottom: 0;
     line-height: 36px;
   }
-  .cross img{
-    width: 17px;
+  .cross .fa-solid.fa-x{
+    margin-top: 11px;
+    margin-left: 4px;
+    font-size: 24px !important;
+    color: #64748b !important;
   }
+
   .mobile-sidebar-inner{
     margin-top: 1.5rem;
   }
@@ -213,7 +231,8 @@
 .left-side-bar{
     width: 25%;
     position: sticky;
-    padding-top: 150px;
+    margin-top: 75px;
+    padding-top: 75px;
     padding-left: 30px;
     height: 100vh; /* Sticky element needs a height to become sticky */
     overflow-y: auto; /* Enable scrolling within the left child */
@@ -229,27 +248,37 @@
   }
   .sidebar-ul{
     border-left: 2px solid #E2E8F0;
-    padding-left: 14px;
+    padding-left: 13px;
   }
   .sidebar-ul li{
     list-style: none;
-    /* padding: 7px 0; */
     margin-bottom: 1rem;
-  }
-  .sidebar-ul li::marker {
-    color: #cfd6df; /* Custom color for the marker */
-}
-  .sidebar-ul li:hover{
-    list-style: initial;
-  }
-  .sidebar-ul li:hover a{
-    color: #475569;
   }
   .sidebar-ul li a{
     color: #64748B;
     text-decoration: none;
     font-size: 16px;
   }
+  .sidebar-ul li:hover{
+    list-style: initial;
+  }
+  .sidebar-ul li:hover a{
+    color: #475569;
+  }
+  .sidebar-first-child a{
+    color: rgb(14 165 233) !important;
+  }
+  .sidebar-first-child{
+    list-style: initial !important;
+  }
+  .sidebar-first-child::marker{
+    color: rgb(14 165 233) !important;
+  }
+  .sidebar-ul li::marker {
+    color: #cfd6df; /* Custom color for the marker */
+}
+
+
 
 .right-content{
     width: 75%;
@@ -260,9 +289,12 @@
     display: flex;
 }
 .main-content-area{
-    width: 70%;
+    width: 74%;
     margin-top: 150px;
-    padding: 0 64px;
+    padding: 0 52px;
+}
+.getting-started{
+    padding-bottom: 40px;
 }
 .small-title{
     font-size: 14px;
@@ -273,10 +305,11 @@
     color: #0F172A;
     margin-bottom: 20px;
 }
+
 .getting-started p{
     font-size: 20px !important;
     color: #64748B;
-    margin-bottom: 25px;
+    margin-bottom: 0;
 }
 /* card */
 .card-image{
@@ -285,7 +318,7 @@
 }
 .card-title{
     color: #0F172A !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 30px !important;
 }
 .card-text{
     font-size: 16px;
@@ -296,7 +329,7 @@
     cursor: pointer;
 }
 .card-area{
-    padding: 40px 0;
+    padding: 35px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns per row */
     gap: 30px; /* Adjust as needed */
@@ -306,7 +339,7 @@
     outline: 2px solid rgba(50,130,246,1);
 }
 /* Custom CSS for small devices */
-@media (max-width: 767px) {
+@media (max-width: 644px) {
     .card-area {
       display: block; /* Revert to default block display */
     }
@@ -364,17 +397,23 @@
     flex-direction: column;
     align-items: end;
 }
-.bottom-part p:first-child{
+.bottom-part a:first-child{
+    font-size: 16px !important;
     font-weight: 600;
-    color: #0F172A;
+    color: rgb(15 23 42);
     cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
 }
-.bottom-part p:last-child{
+.bottom-part a:last-child{
     color: #475569;
     cursor: pointer;
+    text-decoration: none;
 }
-.bottom-part p img{
-    width: 30px;
+.bottom-part .fa-arrow-right{
+    width: 14px;
+    color: #475569;
+    margin-left: 3px;
 }
 /* main content right side */
 .right-side-content{
@@ -404,10 +443,21 @@
     color: #64748B;
     font-size: 14px;
 }
+.right-side-list li:first-child a{
+    color: rgb(14 165 233) !important;
+}
 .right-side-list li a:hover{
     color: #334155;
 }
 
+@media (min-width:991px) and (max-width:1200px) {
+    .main-content-area{
+        width: 100%;
+    }
+    .right-side-content{
+        display: none;
+    }
+}
 
 @media (max-width:991px) {
     .left-side-bar{
@@ -437,10 +487,47 @@
         width: 100%;
         padding: 0px 30px;
     }
+    .mobile-sidebar{
+        /* Hide scrollbar for WebKit (Chrome, Safari, etc.) */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    }
+
 }
 @media (max-width:576px) {
     .main-content-area{
         width: 100%;
         padding: 0px 16px;
     }
+}
+@media (min-width:640px) and (max-width:767.8px)  {
+    .container, .container-sm {
+        max-width: 600px !important;
+    }
+}
+@media (max-width:400px)  {
+    .navbar-logo{
+        width: 80px;
+    }
+    .mobile-logo{
+        margin-left: 30px;
+      }
+      .small-logo{
+        margin-left: 10px;
+      }
+      .cross .fa-solid.fa-x{
+        margin-top: 9px;
+      }
+}
+@media (max-width:320px)  {
+    .navbar-logo{
+        width: 80px;
+    }
+    /* .mobile-logo{
+        margin-left: 10px;
+      }
+    .small-logo{
+        margin-left: 10px;
+      } */
 }

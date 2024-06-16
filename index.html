@@ -8,6 +8,11 @@
      <link rel="stylesheet" href="./style.css">
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- font awesome  -->
+    <script
+      src="https://kit.fontawesome.com/722bf37857.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +20,7 @@
   <style>
     body{
     font-family: "Lexend";
-}
+    }
   </style>
   </head>
   <body>
@@ -23,7 +28,7 @@
      <header>
     <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
-            <div class="d-flex" style="width: 200px;">
+            <div class="navbar-logo">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -38,20 +43,20 @@
             </span>
             <input type="text" class="search-input" placeholder="Search Docs..">
             <!-- <span class="search-text">Type your search here</span> -->
-            <span class="search-helper">CTRL K</span>
+            <span class="search-helper">Ctrl K</span>
         </div>
 
         <div class="d-flex" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-row">
             <li class="nav-item mobile-search-icon">
               <a class="nav-link">
-                  <svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"  aria-hidden="true" viewBox="0 0 16 16" class="w-15 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300 github-image" >
-                      <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path></svg>
-              </a>
+                <svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"  aria-hidden="true" viewBox="0 0 20 20" class="h-20 w-20 flex-none fill-slate-400 group-hover:fill-slate-500 dark:fill-slate-500 md:group-hover:fill-slate-400  github-image">
+                  <path d="M16.293 17.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM9 14a5 5 0 0 1-5-5H2a7 7 0 0 0 7 7v-2ZM4 9a5 5 0 0 1 5-5V2a7 7 0 0 0-7 7h2Zm5-5a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7v2Zm8.707 12.293-3.757-3.757-1.414 1.414 3.757 3.757 1.414-1.414ZM14 9a4.98 4.98 0 0 1-1.464 3.536l1.414 1.414A6.98 6.98 0 0 0 16 9h-2Zm-1.464 3.536A4.98 4.98 0 0 1 9 14v2a6.98 6.98 0 0 0 4.95-2.05l-1.414-1.414Z"></path></svg>
+         </a>
             </li>
             <li class="nav-item dropdown dropdown-icon">  
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"  aria-hidden="true" viewBox="0 0 16 16" class="star-image dark:hidden fill-slate-400">
+                <svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"  aria-hidden="true" viewBox="0 0 16 16" class="star-image dark:hidden ">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1a1 1 0 0 1 2 0v1a1 1 0 1 1-2 0V1Zm4 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm2.657-5.657a1 1 0 0 0-1.414 0l-.707.707a1 1 0 0 0 1.414 1.414l.707-.707a1 1 0 0 0 0-1.414Zm-1.415 11.313-.707-.707a1 1 0 0 1 1.415-1.415l.707.708a1 1 0 0 1-1.415 1.414ZM16 7.999a1 1 0 0 0-1-1h-1a1 1 0 1 0 0 2h1a1 1 0 0 0 1-1ZM7 14a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm-2.536-2.464a1 1 0 0 0-1.414 0l-.707.707a1 1 0 0 0 1.414 1.414l.707-.707a1 1 0 0 0 0-1.414Zm0-8.486A1 1 0 0 1 3.05 4.464l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707ZM3 8a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Z"></path></svg>
              
               </a>
@@ -94,7 +99,7 @@
               <!-- mobile sidebar -->
               <div class="mobile-sidebar">
                 <div class="mobile-head">
-                  <p class="cross"><img src="./images/cross.png" alt="" /></p>
+                  <p class="cross"><i class="fa-solid fa-x"></i></p>
                   <div class="mobile-logo">
                     <img src="./images/logo-mobile.png" alt="" />
                   </div>
@@ -102,7 +107,7 @@
                 <div class="mobile-sidebar-inner">
                   <h5 class="sidebar-list-title">Get Started</h5>
                   <ul class="sidebar-ul">
-                    <li><a href="#">Introduction</a></li>
+                    <li class="sidebar-first-child"><a href="#">Introduction</a></li>
                     <li><a href="#">Get aikeedo</a></li>
                     <li><a href="#">File Strcture</a></li>
                     <li><a href="#">Server requirements</a></li>
@@ -178,7 +183,7 @@
        <div class="left-side-bar">
         <h5 class="sidebar-list-title">Get Started</h5>
         <ul class="sidebar-ul">
-          <li><a href="#">Introduction</a></li>
+          <li class="sidebar-first-child"><a href="#">Introduction</a></li>
           <li><a href="#">Get aikeedo</a></li>
           <li><a href="#">File Strcture</a></li>
           <li><a href="#">Server requirements</a></li>
@@ -248,87 +253,90 @@
           <!-- right-content-area -->
            <div class="right-content-inner">
             <div class="main-content-area">
-              <div class="getting-started">
-                <h5 class="small-title">Get Started</h5>
-                <h2 class="get-start-title">Getting Started</h2>
-                <p>Welcome to the Aikeedo documentation! Whether you're a developer, administrator, or content creator, this documentation is your go-to resource for understanding and harnessing the power of Aikeedo, the AI Powered Content Platform.
-                </p>
-              </div>
-              <hr>
-              <div class="card-area">
-                <div class="card">
-                  <div class="card-body">
-                    <img class="card-image" src="./images/card-image-1.svg" alt="">
-                    <h5 class="card-title">Installation Guide</h5>
-                    <p class="card-text">Step-by-step instructions to install Aikeedo on your server.</p>
-                  </div>
+              <div class="container">
+                <div class="getting-started">
+                  <h5 class="small-title">Get Started</h5>
+                  <h2 class="get-start-title">Getting Started</h2>
+                  <p>Welcome to the Aikeedo documentation! Whether you're a developer, administrator, or content creator, this documentation is your go-to resource for understanding and harnessing the power of Aikeedo, the AI Powered Content Platform.
+                  </p>
                 </div>
-                <div class="card">
-                  <div class="card-body">
-                    <img class="card-image" src="./images/card-image-2.svg" alt="">
-                    <h5 class="card-title">Website & Branding</h5>
-                    <p class="card-text">Make a lasting impression by customizing your Aikeedo platform with a unique logo.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <img class="card-image" src="./images/card-image-3.svg" alt="">
-                    <h5 class="card-title">AI, GPT & Generators</h5>
-                    <p class="card-text">Integrate the power of OpenAI into your Aikeedo Platform</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <img class="card-image" src="./images/card-image-4.svg" alt="">
-                    <h5 class="card-title">Changelog</h5>
-                    <p class="card-text">All notable changes to this project</p>
-                  </div>
-                </div>
-              </div>
-                <div class="main-content-details">
-                  <div class="main-content-common-title">
-                    Aikeedo (#aikeedo)
-                  </div>
-                  <div class="main-content-common-text">
-                    Aikeedo, also known as #aikeedo, is a cutting-edge AI-powered content platform designed for a variety of applications. Whether you're creating content, managing data, or building applications, Aikeedo is your versatile companion.
-                  </div>
-                  <!--  -->
-                  
-                  <div class="main-content-common-title">
-                    AI Powered Content Platform
-                  </div>
-                  <div class="main-content-common-text mb-3">
-                    Aikeedo stands out as a self-hosted, source-available, standalone SaaS-ready PHP web application. It brings the power of artificial intelligence to your fingertips, enhancing your content creation and management processes.
+                <hr>
+                <div class="card-area">
+                  <div class="card">
+                    <div class="card-body">
+                      <img class="card-image" src="./images/card-image-1.svg" alt="">
+                      <h5 class="card-title">Installation Guide</h5>
+                      <p class="card-text">Step-by-step instructions to install Aikeedo on your server.</p>
                     </div>
-                  <ul>
-                    <li><b>Self-Hosted:</b>Take control of your data and hosting environment by self-hosting Aikeedo. Enjoy the flexibility of managing your content on your terms.</li>
-                    <li><b>Source-Available:</b>Aikeedo believes in transparency and collaboration. The source code is available for you to explore, customize, and contribute to, fostering a community-driven development environment.
-                    </li>
-                    <li><b>Standalone SaaS Ready:</b>Aikeedo is not just a web application; it's a standalone Software as a Service (SaaS) solution. Deploy it seamlessly, and experience the benefits of a robust content platform.</li>
-                  </ul>  
-                  <!--  -->
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <img class="card-image" src="./images/card-image-2.svg" alt="">
+                      <h5 class="card-title">Website & Branding</h5>
+                      <p class="card-text">Make a lasting impression by customizing your Aikeedo platform with a unique logo.</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <img class="card-image" src="./images/card-image-3.svg" alt="">
+                      <h5 class="card-title">AI, GPT & Generators</h5>
+                      <p class="card-text">Integrate the power of OpenAI into your Aikeedo Platform</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <img class="card-image" src="./images/card-image-4.svg" alt="">
+                      <h5 class="card-title">Changelog</h5>
+                      <p class="card-text">All notable changes to this project</p>
+                    </div>
+                  </div>
+                </div>
                   <div class="main-content-details">
                     <div class="main-content-common-title">
-                      Connect with @heyaikeedo
+                      Aikeedo (#aikeedo)
                     </div>
-                    <div class="main-content-common-text mb-5">
-                      Stay updated and connect with us on social media! Follow us <span class="extra-css">(@heyaikeedo)</span> for the latest news, updates, and community discussions. Join the conversation, share your experiences, and be part of the Aikeedo community.
-                    <br>
-                    Aikeedo is more than just a platform; it's a community-driven ecosystem that thrives on innovation and collaboration. Get ready to unleash the power of AI in your content creation journey with Aikeedo!
-                    <br>
-                    Explore more sections of our documentation to dive deeper into the features, installation guides, and best practices. Let's embark on this exciting journey together!
-                    <br>
-                    If you have any questions or need assistance, feel free to <span class="extra-css">reach out to our support team</span>.
+                    <div class="main-content-common-text">
+                      Aikeedo, also known as #aikeedo, is a cutting-edge AI-powered content platform designed for a variety of applications. Whether you're creating content, managing data, or building applications, Aikeedo is your versatile companion.
                     </div>
                     <!--  -->
-                    <hr>
-                    <div class="bottom-part">
-                      <p>Next</p>
-                      <p>Get aikeedo <img src="./images/arroe-right.png" alt=""></p>
+                    
+                    <div class="main-content-common-title">
+                      AI Powered Content Platform
                     </div>
-                </div>
-  
-            </div>
+                    <div class="main-content-common-text mb-3">
+                      Aikeedo stands out as a self-hosted, source-available, standalone SaaS-ready PHP web application. It brings the power of artificial intelligence to your fingertips, enhancing your content creation and management processes.
+                      </div>
+                    <ul>
+                      <li><b>Self-Hosted:</b>Take control of your data and hosting environment by self-hosting Aikeedo. Enjoy the flexibility of managing your content on your terms.</li>
+                      <li><b>Source-Available:</b>Aikeedo believes in transparency and collaboration. The source code is available for you to explore, customize, and contribute to, fostering a community-driven development environment.
+                      </li>
+                      <li><b>Standalone SaaS Ready:</b>Aikeedo is not just a web application; it's a standalone Software as a Service (SaaS) solution. Deploy it seamlessly, and experience the benefits of a robust content platform.</li>
+                    </ul>  
+                    <!--  -->
+                    <div class="main-content-details">
+                      <div class="main-content-common-title">
+                        Connect with @heyaikeedo
+                      </div>
+                      <div class="main-content-common-text mb-5">
+                        <p>Stay updated and connect with us on social media! Follow us <span class="extra-css">(@heyaikeedo)</span> for the latest news, updates, and community discussions. Join the conversation, share your experiences, and be part of the Aikeedo community.</p>
+                      <p>Aikeedo is more than just a platform; it's a community-driven ecosystem that thrives on innovation and collaboration. Get ready to unleash the power of AI in your content creation journey with Aikeedo!
+                      </p>
+                      <p>Explore more sections of our documentation to dive deeper into the features, installation guides, and best practices. Let's embark on this exciting journey together!
+                      </p>
+                      <p>If you have any questions or need assistance, feel free to <span class="extra-css">reach out to our support team</span>.
+                      </p>  
+                    </div>
+                      <!--  -->
+                      <hr>
+                      <div class="bottom-part">
+                        <a href="#">Next</a>
+                        <a href="#">Get aikeedo <i class="fa-solid fa-arrow-right"></i></a>
+                      </div>
+                  </div>
+    
+             </div>
+              </div>
+          </div>
             <div class="right-side-content">
               <h5 class="right-side-title">On This page</h5>
               <ul class="right-side-list">
@@ -337,7 +345,6 @@
                 <li><a href="#">Connect with @heyaikeedo</a></li>
               </ul>
             </div>
-           </div>
         </div>
       </section>
      </main>

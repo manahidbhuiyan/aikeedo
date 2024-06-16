@@ -6,8 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var crossButton = document.querySelector('.cross')
 
     humberger.addEventListener("click", function () {
-        sidebar.style.width = "70%";
-        // sidebar.style.padding = "30px";
+        if (window.innerWidth >= 576 && window.innerWidth < 768) {
+            sidebar.style.width = "55%";
+        } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+            sidebar.style.width = "42%";
+        } else {
+            sidebar.style.width = "80%";
+        }
+        // sidebar.style.padding = "30px"; // Uncomment if needed
         overLay.style.width = "100%";
         // sidebar.classList.toggle("mobile-active");
         sidebar.classList.add("sidebar-padding");
