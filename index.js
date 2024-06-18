@@ -26,6 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.remove("sidebar-padding");
 
     });
+
+    // search show hide
+    var overlayer = document.querySelector('.overlayer')
+    var searchBar = document.querySelector('.search-bar')
+    var fakeOverlay = document.querySelector('.fakeOverlay')
+    var mobileSearchIcon = document.querySelector('.mobile-search-icon')
+    searchBar.addEventListener('click', function () {
+        overlayer.style.display = 'block'
+    });
+    mobileSearchIcon.addEventListener('click', function () {
+        overlayer.style.display = 'block'
+    });
+    fakeOverlay.addEventListener('click', function () {
+        overlayer.style.display = 'none'
+
+    });
 })
 
 
@@ -39,3 +55,4 @@ $(document).ready(function () {
         $(".left-side-bar").scrollTop($(this).scrollTop());
     });
 });
+
